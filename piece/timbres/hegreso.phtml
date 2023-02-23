@@ -1,0 +1,62 @@
+<style>
+ .img{
+        height: 20px;
+    }  
+</style>
+<script type="text/javascript" src="js/hegresor.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../librerias/javascript/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<script type="text/javascript" src="../librerias/javascript/jscalendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar-setup.js"></script>
+<div class="formularios">
+    <div class="forma" id="panel">
+       <h1>Receptor del Documento Histórico</h1>
+        <form action="javascript:void(0);" id="egresar" >
+        <div class="fields">
+            <table>
+                <tr>
+                    <td><label>No. de Documento:</label></td>
+                    <td><input id="doc" readonly="readonly"required/></td>
+                    <input type="hidden" id="id_doc"/>
+                    <td><a id="bus_doc"><img class="img" src="images/icon_search.png"/></a></td>
+                </tr>
+                <tr>
+                    <td><label>Nombre:</label></td>
+                    <td><input id="name"required/></td>
+                </tr>
+                <tr>
+                    <td><label>Cedula o DPI:</label></td>
+                    <td><input id="nocedula"required/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Egresar" class="nuevoLink" id="in_egreso"/></td>
+                    <td><input type="reset" class="linkClear" value="Borrar"/></td>
+                </tr>
+            </table>
+        </div>
+        </form>
+    </div>
+    <div class="forma" id="for_doc">
+       <h1>Buscar Documento</h1>
+        <form action="javascript:void(0);" id="bus_documentos">
+            <table>
+                <tr>
+                    <td><label>No. de Documento:</label></td>
+                    <td><input id="doc_bus"/></td>
+                </tr>
+                <tr>
+                    <td><label>Sticker:</label></td>
+                    <td><input id="doc_stiker" /></td>
+                </tr>
+                <tr> 
+                    <td></td>
+                    <td><input class="buscarLink" value="Buscar" type="submit" id="buscar"/></td>
+                    <td></td><td><input type="reset" class="linkClear" value="Borrar"/></td>
+                </tr>
+            </table>
+        </form>
+       <div class="resultado" id="resu_doc"></div>
+        <input class="backLink" type="button" value="Regresar" id="back" />
+    </div>
+</div>

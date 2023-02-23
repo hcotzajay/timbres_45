@@ -1,0 +1,105 @@
+<style>
+ .img{
+        height: 20px;
+    }
+</style>
+<script type="text/javascript" src="js/historico.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../librerias/javascript/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<script type="text/javascript" src="../librerias/javascript/jscalendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar-setup.js"></script>
+<div class="formularios">
+    <div class="forma" id="panel">
+        <h1>Historico</h1>
+            <form action="javascript:void(0);" id="form_historico">
+                <div class="fields">
+                    <table>
+                        <tr>
+                            <td><label>No. de Documento:</label></td>
+                            <td><input id="doc" /></td>
+                        </tr>
+                        <tr>
+                            <td><label>No. de sticker:</label></td>
+                            <td><input id="sticker" /></td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td><label>Colegiado del Notario:</label></td>
+                            <td><input id="not" /></td>
+                            <input type="hidden" id="id_not"/>
+                            <td><a id="bus_not"><img class="img"src="images/icon_search.png"/></a></td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td><label>Valor de los timbres de:</label></td>
+                            <td><input id="valor"/></td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td><label>A valor de los timbres :</label></td>
+                            <td><input id="valor_a"/></td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td><label>De fecha de Ingreso:</label></td>
+                            <td><input id="fech" /></td>
+                            <td><a id="bus_fech"><img class="img" src="images/icon_calendar.png"</a></td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td><label>A fecha de Ingreso:</label></td>
+                            <td><input id="fech2" /></td>
+                            <td><a id="bus_fech2"><img class="img" src="images/icon_calendar.png"</a></td>
+                        </tr>
+                        <tr>
+                            <td><label>Estado del Documento</label></td>
+                            <td>
+                                <select id="estado">
+                                    <option value="">Seleccione uno</option>
+                                    <option value="si">Activo</option>
+                                    <option value="no">Inactivo</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" class="buscarLink" id="submit_repo" value="Buscar"</td>
+                            <td><input type="reset" class="linkClear" value="Borrar"/></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><a id="submit_exel"><img src="images/icon_xls.png"</a></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td><a id="submit_pdf"><img  src="images/pdf.jpg"</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        <div id="div_repo"></div>
+    </div>
+    <div class="forma" id="div_notario">
+        <h1>Busqueda de Notario</h1>
+        <form action="javascript:void(0);" id="form_notario">
+            <table>
+                <tr>
+                    <td>Colegiado:</td>
+                    <td><input id="buscarcolegiado"/></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input id="buscarnombre"/></td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                    <td><input id="buscarapellido"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" class="buscarLink" id="bus_notario" value="Buscar"</td>
+                </tr>
+            </table>
+        </form>
+        <div id="div_not"></div>
+        <input type="button" class="backLink" value="Regresar"/>
+    </div>
+</div>

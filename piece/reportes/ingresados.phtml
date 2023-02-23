@@ -1,0 +1,74 @@
+<style>
+    .img {
+        height: 20px;
+    }
+</style>
+<script type="text/javascript" src="js/repoIngresos.min.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../librerias/javascript/jscalendar/calendar-blue.css"
+      title="win2k-cold-1"/>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar-setup.js"></script>
+<div class="formularios">
+    <div class="forma" id="panel">
+        <h1>Reporte de los timbres ingresados</h1>
+        <br>
+        <div class="fields">
+            <form action="javascript:void(0);" id="form_reporte">
+                <div class="fields">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td width="15%;"><label>No. de documento:</label></td>
+                            <td width="15%;"><input id="documento"/></td>
+                        </tr>
+                        <tr>
+                            <td width="15%;"><label>No. de sticker:</label></td>
+                            <td width="15%;"><input id="sticker"/></td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td width="15%;"><label>Día de Ingreso:</label></td>
+                            <td width="15%;"><input id="fecha"/></td>
+                            <td><a id="btnCalendar"><img class="img" src="images/icon_calendar.png"</a></td>
+                        </tr>
+                        <tr></tr>
+                        <td><label>Rango de fechas:</label></td>
+                        <tr>
+                            <td width="15%;"><label>Fecha inicio:</label></td>
+                            <td width="15%;"><input id="fechaInicio"/></td>
+                            <td><a id="btnCalendarI"><img class="img" src="images/icon_calendar.png"</a></td>
+                        </tr>
+                        <tr>
+                            <td width="15%;"><label>Fecha fin:</label></td>
+                            <td width="15%;"><input id="fechaFin"/></td>
+                            <td><a id="btnCalendarF"><img class="img" src="images/icon_calendar.png"</a></td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td width="15%;">
+                                <input type="radio" name="option" id="optionA">Activo
+                            </td>
+                            <td width="15%;">
+                                <input type="radio" name="option" id="optionI">Inactivo
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td><input type="submit" class="buscarLink" id="btnRepoIngresos" value="Buscar"</td>
+                            <td><input type="reset" class="linkClear" value="Borrar"/></td>
+                            <td></td>
+                            <td style="text-align: right;"><a id="submit_exel"><img src="images/icon_xlsx.png"</a></td>
+                            <td width="5%;" style="text-align: right;"><a id="submit_pdf"><img src="images/pdf.jpg"</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div style="width: 100%; text-align: center;">
+            <strong>Nota:</strong>
+            si no se selecciona un día en específico, se listarán los documentos del día en curso.
+        </div>
+        <br>
+        <div id="div_bus_repo"></div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<head>
+<meta charset="UTF-8">
+<title>Bitácora del bitácora</title>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../librerias/javascript/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<link rel="stylesheet" type="text/css" href="css/sys/bitacora.css" />
+<script type="text/javascript" src="../librerias/javascript/jscalendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar-setup.js"></script>
+<script type="text/javascript" src="js/sys/bitacora.js"></script>
+</head>
+<div class="formularios">
+	<div class="forma" id="forma1">
+		<h1>Bitácora del sistema</h1>
+        <form action="javascript:void(0);">
+			<table>
+				<tr>
+					<td>Nombre de usuario</td>
+					<td><input id="usrname" /></td>
+				</tr>
+				<tr>
+					<td>Fecha inicial de búsqueda</td>
+					<td><input type="datetime" id="fechaIni" /></td>
+					<td><input type="button" id="butFechaIni" class="linkCalendar"></td>
+				</tr>
+				<tr>
+					<td>Fecha final de búsqueda</td>
+					<td><input type="datetime" id="fechaFin" /></td>
+					<td><input type="button" id="butFechaFin" class="linkCalendar"></td>
+				</tr>
+				<tr>
+					<td>Tabla</td>
+					<td><select id="tabla"></select></td>
+				</tr>
+				<!-- <tr>
+					<td>Campo</td>
+					<td><select id="campo"></select></td>
+				</tr> -->
+				<tr>
+					<td>Acción</td>
+					<td><select id="accion"></select></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" class="buscarLink" value="Buscar"></td>
+					<td><input type="button" class="linkXLS" value="Generar Reporte"/></td>
+				</tr>
+			</table>
+		</form>
+        <div class="resultado" id="listbita">
+        </div>
+	</div>
+</div>

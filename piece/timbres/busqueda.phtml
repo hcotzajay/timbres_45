@@ -1,0 +1,144 @@
+<style>
+  .img{
+        height: 20px;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    Calendar.setup({
+       inputField: "bus_fecha02",
+       ifFormat: "%d/%m/%Y",
+       button: "butfecha02"
+   });
+});
+</script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar.js"></script>
+<script type="text/javascript" src="js/busqueda.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../librerias/javascript/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<script type="text/javascript" src="../librerias/javascript/jscalendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar-setup.js"></script>
+<div class="formularios">
+    <div class="forma" id="panel">
+        <h1>Busqueda de timbres</h1>
+        <form action="javascript:void(0);" id="buscar">
+            <div class="fields">
+                <table>
+                    <tr>
+                        <td><label>No. de Documento:</label></td>
+                        <td><input id="bus_nodoc" value="" /></td>
+                    </tr>
+                    <tr></tr>
+                        <td><label>No. del sticker:</label></td>
+                        <td><input id="bus_nosti" value=""/></td>
+                    </tr><tr>
+                        <td><label>Colegiado del Notario:</label></td>
+                        <input type="hidden" id="notario_id"/>
+                        <td><input id="notario_nombre" readonly="readonly" value=""/></td>
+                        <td><a id="bus_notario"><img class="img" src="images/icon_search.png" /></a></td>
+                    </tr><tr>
+                        <td><label>Fecha de ingreso de :</label></td>
+                        <td><input id="bus_fecha01" value=""/></td>
+                        <td><a id="butfecha01"><img class="img" src="images/icon_calendar.png"/></a></td>
+                    </tr><tr>
+                        <td><label>A la fecha:</label></td>
+                        <td><input id="bus_fecha02" value=""/></td>
+                        <td><a id="butfecha02"><img class="img" src="images/icon_calendar.png"/></a></td>
+                    </tr><tr>
+                        <td></td><td><input type="submit" class="buscarLink" id="bus_ingreso" value="Buscar"/></td>
+                        <td><input type="reset" class="linkClear" value="Borrar"/></td>
+                    </tr>
+                </table>
+            </div>
+            <p id="listadordocumentos"></p>
+        </form>
+    </div>
+    <div class="forma" id="listanotario">
+        <form action="javascript:void(0);" id="buscar023">
+        <h1>Listado de notarios</h1>
+        <table>
+                <tr>
+                    <td>Colegiado:</td>
+                    <td><input id="buscarcolegiado"/></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input id="buscarnombre"/></td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                    <td><input id="buscarapellido"/></td>
+                </tr>
+            </table>
+        <input class="buscarLink" type="submit" value="Buscar" id="buscar_notario"/>
+    </form>
+        <div class="resultado" id="listadonotario"></div>
+        <input class="backLink" type="button" value="Regresar" id="backtolist" />
+    </div>
+    <div class="forma" id="listanotario2">
+        <form action="javascript:void(0);" id="buscar024">
+        <h1>Listado de notarios</h1>
+        <table>
+                <tr>
+                    <td>Colegiado:</td>
+                    <td><input id="buscarcolegiado2"/></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input id="buscarnombre2"/></td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                    <td><input id="buscarapellido2"/></td>
+                </tr>
+            </table>
+        <input class="buscarLink" type="submit" value="Buscar" id="buscar_notario2"/>
+    </form>
+        <div class="resultado" id="listadonotario2"></div>
+        <input class="backLink" type="button" value="Regresar" id="backtolist2" />
+    </div>
+    <div class="forma" id="editform">
+        <h1>Editar Documento</h1>
+        <form action="javascript:void(0);" id="edit_form">
+            <table>
+                <tr>
+                    <td><label>No. Documento:</label></td>
+                    <input type="hidden" id="do_id_edit"/>
+                    <td><input id="do_edit"/></td>
+                </tr>
+                <tr>
+                    <td><label>No. Sticker:</label></td>
+                    <td><input id="stiker_edit"/></td>
+                </tr>
+                <tr>
+                    <td><label>Valor:</label></td>
+                    <td><input id="valor_edit"/></td>
+                </tr>
+                <tr>
+                    <td><label>Nombre del notario:</label></td>
+                    <td><input id="notario_edit"/></td>
+                <input type="hidden"id="notario_id_edit"/>
+                <td><a id="bus_notario2"><img class="img "src="images/icon_search.png"/></a></td>
+                </tr>
+                <tr>
+                  <script>
+                    $(document).ready(function(){
+                        Calendar.setup({
+                           inputField: "fecha_edit",
+                           ifFormat: "%d/%m/%Y",
+                           button: "butfecha03"
+                       });
+                    });
+                 </script>
+                    <td><label>Fecha de ingreso:</label></td>
+                    <td><input id="fecha_edit"</td>
+                    <td><a id="butfecha03"><img class="img" src="images/icon_calendar.png"/></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" class="nuevoLink" value="Guardar" id="save_edit"/></td>
+                </tr>
+            </table>
+        </form>
+        <input class="backLink" type="button" value="Regresar" id="backtolist3" />
+    </div>
+</div>

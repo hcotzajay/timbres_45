@@ -1,0 +1,75 @@
+<style>
+ .img{
+        height: 20px;
+    }   
+</style>
+<script type="text/javascript" src="js/ingresar.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../librerias/javascript/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<script type="text/javascript" src="../librerias/javascript/jscalendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../librerias/javascript/jscalendar/calendar-setup.js"></script>
+
+<div class="formularios">
+    <div class="forma" id="panel">
+        <h1>Ingreso de timbres</h1>
+        <form action="javascript:void(0);" id="ingresar">
+            <div class="fields">
+                <table>
+                    <tr>
+                        <td><label>No. de Documento:</label></td>
+                        <td><input id="nodoc" required/></td>
+                    </tr>
+                    <tr></tr>
+                        <td><label>No. del sticker:</label></td>
+                        <td><input id="nosti" required /></td>
+                    </tr><tr>
+                        <td><label>Valor:</label></td>
+                        <td><input id="valor"required/></td>
+                    </tr><tr>
+                        <td><label>Colegiado del Notario:</label></td>
+                        <input type="hidden" id="notario_id"/>
+                        <td><input id="notario_nombre" readonly="readonly" required/></td>
+                        <td><a id="bus_notario"><img class="img" src="images/icon_search.png"/></a></td>
+                    </tr><tr>
+                        <td></td><td><input type="submit" class="nuevoLink" id="ingreso" value="Ingresar"/></td>
+                        <td><input type="reset" class="linkClear" value="Borrar"/></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    
+    <div class="forma" id="listanotario">
+        <h1>Listado de notarios</h1>
+        <form action="javascript:void(0);" id="bus_in">
+            <table>
+                <tr>
+                    <td>Colegiado:</td>
+                    <td><input id="buscarcolegiado"/></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input id="buscarnombre"/></td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                    <td><input id="buscarapellido"/></td>
+                </tr>
+            </table>
+            <input class="buscarLink" type="submit" value="Buscar" id="buscar"/>
+            <div class="resultado" id="listadonotario"></div>
+        </form>
+        <input class="backLink" type="button" value="Regresar" id="backLink01" />
+        <input class="buscarLink" type="button" value="Nuevo Notarios" id="buscar_notario"/>
+    </div>
+    
+    <div class="forma" id="in_listadonotario">
+        <form action="javascript:void(0);" id="form_GBM">
+            <h1>Buscar notario</h1>
+            Ingrese el colegiado del notario: <input id="buscole_notario"/><br>
+            <input class="buscarLink" type="submit" value="Buscar" id="bus_gbm" />
+        </form>
+        <div class="resultado" id="GBM_notario"></div>
+        <input class="backLink" type="button" value="Regresar" id="backLink02" />
+    </div>
+</div>

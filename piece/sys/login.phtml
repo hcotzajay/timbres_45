@@ -1,0 +1,57 @@
+<!--<link rel="stylesheet" media="screen" type="text/css" href="css/sys/login.css">-->
+<script type="text/javascript" src="../librerias/javascript/crypto/md5-min.js"></script>
+<script type="text/javascript" src="js/sys/login.js"></script>
+<div class="formularios">
+	<div class="forma" id="forma1">
+		<h1 id="titulo">Ingresar</h1>
+        <form action="javascript:setMensaje('Validando', 'info')"  id="logear">
+			<table>
+			<tr>
+				<td>Nombre de usuario</td>
+				<td>
+					<input id="usuario" />
+				</td>
+			</tr>
+			<tr>
+				<td>Contraseña</td>
+				<td>
+					<input id="pass" type="password" />
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Ingresar" class="loginLink" />
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a href="javascript:void(0);">Recuperar Contraseña</a></td>
+			</tr>
+			</table>
+        </form>
+	</div>
+	<div class="forma" id="forma2">
+        <h1 id="titulo">Recuperacion de contraseña</h1>
+        <form id="send" action="javascript:setMensaje('Enviando', 'info')">
+            <table>
+            <tr>
+                <td>Código de empleado</td>
+                <td> <input id="codigo" /> </td>
+            </tr>
+            <tr>
+                <td>Nombre de usuario</td>
+                <td> <input id="usrname" /> </td>
+            </tr>
+            <tr>
+                <td>Correo electrónico registrado</td>
+                <td> <input id="mail" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Cambiar Contraseña" class="linkGuarda" /> </td>
+                <td> <input type="button" id="back" value="Regresar" class="backLink" /> </td>
+            </tr>
+            </table>
+        </form>
+	</div>
+</div>

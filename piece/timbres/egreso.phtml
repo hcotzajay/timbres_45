@@ -1,0 +1,157 @@
+<style>
+ .img{
+        height: 20px;
+    }  
+</style>
+<script type="text/javascript" src="js/egreso.js"></script>
+
+<div class="formularios">
+    <div class="forma" id="panel">
+        <h1>Receptor del Documento</h1>
+        <form action="javascript:void(0);" id="egresar" >
+            <div class="fields">
+                <table>
+                    <tr>
+                        <td><label>No. de Documento:</label></td>
+                        <td><input id="documento" readonly="readonly"required/></td>
+                        <input type="hidden" id="id_doc"/>
+                        <td><a id="bus_doc"><img class="img" src="images/icon_search.png"/></a></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td><label>Nombre de quien recibe:</label></td>
+                        <td><input id="nombre_recibe" readonly="readonly"required/></td>
+                        <input type="hidden" id="id_recep"/>
+                        <td><a id="bus_rec"><img class="img" src="images/icon_search.png"/></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Egresar" class="nuevoLink" id="in_egreso"/></td>
+                        <td><input type="reset" class="linkClear" value="Borrar"/></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <?php
+            ///echo $_SESSION['nombre'].$_SESSION['codigoRH'].$_SESSION['idusr'];
+        ?>
+    </div>
+    <div class="forma" id="bus_documento">
+        <h1>Buscar Documento</h1>
+        <form action="javascript:void(0);" id="bus_documentos">
+            <table>
+                <tr>
+                    <td><label>No. de Documento:</label></td>
+                    <td><input id="doc_bus"/></td>
+                </tr>
+                <tr>
+                    <td><label>Colegiado del Notario:</label></td>
+                    <td><input id="doc_notario" readonly="readonly"/></td>
+                    <td><input type="hidden" id="doc_notario2"></td>
+                    <td><a id="bus_doc_not" ><img class="img" src="images/icon_search.png"/></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="buscarLink" value="Buscar" type="submit" id="buscar1"/></td>
+                    <td></td><td><input type="reset" class="linkClear" value="Borrar"/></td>
+                </tr>
+            </table>
+            <div class="resultado" id="resu_doc"></div>
+        </form>
+        <input type="button" class="backLink" id="no_buscar" value="Regresar"/>
+    </div>
+    <div class="forma" id="bus_notario">
+        <h1>Notarios</h1>
+                <form action="javascript:void(0);" id="bus_notario2">
+            <table>
+                <tr>
+                    <td><label>Colegiado:</label></td>
+                    <td><input id="not_cole"/></td>
+                </tr>
+                <tr>
+                    <td><label>Nombre:</label></td>
+                    <td><input id="not_name"/></td>
+                </tr>
+                <tr>
+                    <td><label>Apellido:</label></td>
+                    <td><input id="not_ape"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="buscarLink" value="Buscar" type="submit" id="buscar3"/></td>
+                </tr>
+            </table>
+            <div class="resultado" id="resu_doc3"></div>
+        </form>
+        <input type="button" class="backLink" id="no_notario" value="Regresar"/>
+    </div>
+    <div class="forma" id="bus_receptor">
+        <h1>Buscar Receptor</h1>
+        <form action="javascript:void(0);" id="bus_receptors">
+            <table>
+                <tr>
+                    <td><label>Nombre:</label></td>
+                    <td><input id="recep_name"/></td>
+                </tr>
+                <tr>
+                    <td><label>Apellido:</label></td>
+                    <td><input id="recep_ape"/></td>
+                </tr>
+                <tr>
+                    <td><label>DPI:</label></td>
+                    <td><input id="recep_dpi"/></td>
+                </tr>
+                <tr>
+                    <td><label>Cedula:</label></td>
+                    <td><input id="recep_cedu"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="buscarLink" value="Buscar" type="submit" id="buscar2"/></td>
+                </tr>
+            </table>
+            <div class="resultado" id="resu_doc2"></div>
+        </form>
+        <input type="button" class="backLink" id="no_recep" value="Regresar"/>
+        <input type="button" class="nuevoLink" id="nuevo_recep" value="Nuevo Receptor"/>
+    </div>
+    <div class="forma" id="ingreso_recep">
+        <form action="javascript:void(0);" id="ingreso_resep2">
+            <table>
+                <tr>
+                    <td><label>Nombre:</label></td>
+                    <td><input id="in_nombre"required/></td>
+                </tr>
+                <tr>
+                    <td><label>Apellido:</label></td>
+                    <td><input id="in_ape"required/></td>
+                </tr>
+                <tr>
+                    <td><label>DPI:</label></td>
+                    <td><input id="in_dpi"required/></td>
+                </tr>
+                <tr>
+                    <td><label>Cedula:</label></td>
+                    <td><input id="in_cedu"/></td>
+                </tr>
+                <tr>
+                    <td><label>Numero Telefonico:</label></td>
+                    <td><input id="in_numero"/></td>
+                </tr>
+                <tr>
+                    <td><label>Correo Electronico:</label></td>
+                    <td><input id="in_correo"/></td>
+                </tr>
+                <tr>
+                    <td><label>Direcci&oacute;n:</label></td>
+                    <td><input id="in_dire"required/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" id="grabar_resep" value="Guardar" class="nuevoLink  "</td>
+                </tr>
+            </table>
+        </form>
+        <input type="button" id="no_recep2"class="backLink" value="Regresar"/>
+    </div>
+</div>
